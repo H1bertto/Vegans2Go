@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Pedido - Vegans 2 Go</title>
+	<link href="../static/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<link href="../static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="../static/css/theme.css" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!----webfonts---->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+	<!----//webfonts---->
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	<!--  jquery plguin -->
+	<!--start slider -->
+	<link rel="stylesheet" href="../static/css/fwslider.css" media="all">
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/css3-mediaqueries.js"></script>
+	<script src="../static/js/fwslider.js"></script>
+	<!--end slider -->
+</head>
+
+<body>
+	<div class="header-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="logo">
+						<a href="{{url_for('pageindex')}}">
+						<!-- Comente a linha de cima e remova o comentario da linha
+							debaixo para fazer testes sem o backend-->
+						<!-- <a href="index.html"> -->
+							<img src="../static/imagens/logo-vegans2go.png" alt="Vegans2Go" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="row">
+				<div class="col-sm-12" style="text-align: center">
+					<h3>Detalhes do Pedido</h3>
+				</div>
+			</div>
+			<div class="d-block col-sm-8">
+				<h1>Seu Carrinho Está Vazio :(</h1>
+			</div>
+			<div class="col-sm-4" style="text-align: left;">
+				<p style="display:inline">{{user}}</p>
+				<br>
+				<p style="display:inline">Valor total do pedido</p>
+				<p class="valorTotal" style="display:inline">R$ 0,00</p>
+				<p>Forma de Pagamento</p>
+				<form action="">
+					<input type="radio" name="pay" value="money"> Dinheiro
+					<br>
+					<input type="radio" name="pay" value="credit"> Cartão de Crédito
+					<br>
+					<input type="radio" name="pay" value="debit"> Cartão de Débito
+					<br>
+					<div class="col-md-4" align="center">
+					<div class="right">
+						<ul class="list-unstyled">
+							<li style="background-color: #7AAC51">
+								<a href="{{url_for('imprimir')}}">Confirmar o Pedido</a>
+								<!-- Comente a linha de cima e remova o comentario da linha
+								debaixo para fazer testes sem o backend-->
+								<!-- <a href="confirmacao.html">Visualizar o Pedido</a> -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				</form>
+
+
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
